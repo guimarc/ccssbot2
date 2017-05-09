@@ -30,12 +30,13 @@ var slackController = Botkit.slackbot();
 var slackBot = slackController.spawn({
   token: process.env.SLACK_TOKEN
 });
-var abc = "guilherme";
+var abc2 = "guilherme";
 slackController.hears(['.*'], ['direct_message', 'direct_mention', 'mention'], function(bot, message) {
   slackController.log('Slack message received');
   middleware.interpret(bot, message, function(err) {
     if (!err)
-		  bot.reply(abc, message.watsonData.output.text.join('\n'));
+		  bot.reply(abc2var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
+, message.watsonData.output.text.join('\n'));
 	});
 });
 
