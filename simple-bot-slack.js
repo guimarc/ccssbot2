@@ -30,11 +30,12 @@ var slackController = Botkit.slackbot();
 var slackBot = slackController.spawn({
   token: process.env.SLACK_TOKEN
 });
+var abc = "guilherme";
 slackController.hears(['.*'], ['direct_message', 'direct_mention', 'mention'], function(bot, message) {
   slackController.log('Slack message received');
   middleware.interpret(bot, message, function(err) {
     if (!err)
-		  bot.reply(message, message.watsonData.output.text.join('\n'));
+		  bot.reply(abc, message.watsonData.output.text.join('\n'));
 	});
 });
 
@@ -47,4 +48,3 @@ app.set('port', port);
 app.listen(port, function() {
   console.log('Client server listening on port ' + port);
 });
-
