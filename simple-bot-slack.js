@@ -35,8 +35,7 @@ slackController.hears(['.*'], ['direct_message', 'direct_mention', 'mention'], f
   slackController.log('Slack message received');
   middleware.interpret(bot, message, function(err) {
     if (!err)
-		  bot.reply(abc2var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
-, message.watsonData.output.text.join('\n'));
+		  bot.reply(abc2, message.watsonData.output.text.join('\n'));
 	});
 });
 
